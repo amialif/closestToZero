@@ -18,11 +18,11 @@ public class ClosestToZero {
      */
     public static void main(String[] args) {
         
-        int[] testingArray = {4,7,9,2};
+        int[] testingArray = {4,7,9,2,-2};
         
         int result = getClosestToZero(testingArray);
         
-        System.err.println("The Closest Number To Zero is : " + result);
+        System.out.println("The Closest Number To Zero in this Array is : " + result);
 
     }
 
@@ -31,10 +31,10 @@ public class ClosestToZero {
         int closestVal = a[0];
         Arrays.sort(a);
 
-        for (int i = 0; i < a.length; i++) {
-            currentValue = a[i] * a[i];
+        for (int index = 0; index < a.length; index++) {
+            currentValue = a[index] * a[index];
             if (currentValue <= (closestVal * closestVal)) {
-                closestVal = a[i];
+                closestVal = a[index];
             }
         }
         return closestVal;
